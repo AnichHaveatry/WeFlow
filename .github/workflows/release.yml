@@ -32,7 +32,8 @@ jobs:
           fi
 
   release-mac-arm64:
-    runs-on: macos-14
+    # macos-14 已被 GitHub 下线，任务会在 1 秒内被取消（"configuration ... is not supported"）
+    runs-on: macos-latest
     needs: prepare-release
 
     steps:
